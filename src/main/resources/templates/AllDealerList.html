@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Area Mgnt System</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+<!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description"
+	content="Mega Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+<meta name="keywords"
+	content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+<meta name="author" content="codedthemes" />
+<!-- Favicon icon -->
+<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+<!-- Google font-->
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500"
+	rel="stylesheet">
+
+<!-- waves.css -->
+<link rel="stylesheet" href="assets/pages/waves/css/waves.min.css"
+	type="text/css" media="all">
+
+<!-- Required Fremwork -->
+<link rel="stylesheet" type="text/css"
+	href="assets/css/bootstrap/css/bootstrap.min.css">
+
+<!-- waves.css -->
+<link rel="stylesheet" href="assets/pages/waves/css/waves.min.css"
+	type="text/css" media="all">
+
+<!-- themify icon -->
+<link rel="stylesheet" type="text/css"
+	href="assets/icon/themify-icons/themify-icons.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" type="text/css"
+	href="assets/icon/font-awesome/css/font-awesome.min.css">
+
+<!-- scrollbar.css -->
+<link rel="stylesheet" type="text/css"
+	href="assets/css/jquery.mCustomScrollbar.css">
+
+<!-- am chart export.css -->
+<link rel="stylesheet"
+	href="https://www.amcharts.com/lib/3/plugins/export/export.css"
+	type="text/css" media="all" />
+    <!-- Style.css -->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Mega Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+    <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+    <meta name="author" content="codedthemes" />
+    <!-- Favicon icon -->
+    
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- Google font-->     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <!-- waves.css -->
+    <link rel="stylesheet" href="assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/font-awesome/css/font-awesome.min.css">
+    <!-- Notification.css -->
+    <link rel="stylesheet" type="text/css" href="assets/pages/notification/notification.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css/css/animate.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+
+</head>
+
+<body>
+	<!-- Pre-loader start -->
+	<div class="theme-loader">
+		<div class="loader-track">
+			<div class="preloader-wrapper">
+				<div class="spinner-layer spinner-blue">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+				<div class="spinner-layer spinner-red">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+				<div class="spinner-layer spinner-yellow">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+
+				<div class="spinner-layer spinner-green">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Pre-loader end -->
+
+
+	<!-- start main div -->
+
+	<div id="pcoded" class="pcoded">
+		<div class="pcoded-overlay-box"></div>
+		<div class="pcoded-container navbar-wrapper">
+			<nav class="navbar header-navbar pcoded-header">
+				<div class="navbar-wrapper">
+					<div class="navbar-logo">
+						<a class="mobile-menu waves-effect waves-light"
+							id="mobile-collapse" href="#!"> <i class="ti-menu"></i>
+						</a>
+						<div class="mobile-search waves-effect waves-light">
+							<div class="header-search">
+								<div class="main-search morphsearch-search">
+									<div class="input-group">
+										<span class="input-group-addon search-close"><i
+											class="ti-close"></i></span> <input type="text" class="form-control"
+											placeholder="Enter Keyword"> <span
+											class="input-group-addon search-btn"><i
+											class="ti-search"></i></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a href="/dashboard-api"> <img class="img-fluid"
+							src="assets/images/logo.png" alt="Theme-Logo" />
+						</a> <a class="mobile-options waves-effect waves-light"> <i
+							class="ti-more"></i>
+						</a>
+					</div>
+
+					<div class="navbar-container container-fluid">
+						<ul class="nav-left">
+							<li>
+								<div class="sidebar_toggle">
+									<a href="javascript:void(0)"><i class="ti-menu"></i></a>
+								</div>
+							</li>
+
+							<li><a href="#!" onclick="javascript:toggleFullScreen()"
+								class="waves-effect waves-light"> <i class="ti-fullscreen"></i>
+							</a></li>
+						</ul>
+						<!--   Logout and profile in corner -->
+						<ul class="nav-right">
+							<li class="user-profile header-notification"><a href="#!"
+								class="waves-effect waves-light"> <img
+									src="assets/images/avatar-4.jpg" class="img-radius"
+									alt="User-Profile-Image"> <span
+									th:text="${session.a_name}" th:unless="${session == null}">[...]</span>
+									<i class="ti-angle-down"></i>
+							</a>
+								<ul class="show-notification profile-notification">
+									<li class="waves-effect waves-light"><a href="/"> <i
+											class="ti-layout-sidebar-left"></i> Logout
+									</a></li>
+								</ul></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="pcoded-main-container">
+
+				<div class="pcoded-wrapper">
+					<!--  *****    FRAGMENT DHASHBOARD ***********  -->
+					<div th:replace="fristfragmentpage :: dashboard "></div>
+
+					<!-- header top contain welcome -->
+
+					<div class="pcoded-content">
+						<!-- Page-header start -->
+						<div class="page-header">
+							<div class="page-block">
+								<div class="row align-items-center">
+									<div class="col-md-8">
+										<div class="page-header-title">
+											<h5 class="m-b-10">Dashboard</h5>
+											<p class="m-b-0">Welcome to ASM</p>
+											<span th:text="${session.alert}" th:unless="${session == null}">[...]</span>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<ul class="breadcrumb-title">
+											<li class="breadcrumb-item"><a href="index.html"> <i
+													class="fa fa-home"></i>
+											</a></li>
+											<li class="breadcrumb-item"><a href="#!">Dealer</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Page-header end -->
+						<div class="pcoded-inner-content">
+							<!-- Main-body start -->
+							<div class="main-body">
+								<div class="page-wrapper">
+									<!-- Page-body start -->
+									<div class="page-body">
+										<div class="row">
+											<div class="col-lg-3">
+												<button type="button" class="btn btn-primary btn-sm mb3"
+													data-toggle="modal" data-target="#saveDealermodel">Add
+													Dealer</button>
+											</div>
+										</div>
+										
+									<!-- Hover table card start -->
+										<div class="card">
+											<div class="card-header">
+												<h5>Dealer Table</h5>
+												<div class="card-header-right">
+													<ul class="list-unstyled card-option">
+														<li><i class="fa fa fa-wrench open-card-option"></i></li>
+														<li><i class="fa fa-window-maximize full-card"></i></li>
+														<li><i class="fa fa-minus minimize-card"></i></li>
+														<li><i class="fa fa-refresh reload-card"></i></li>
+														<li><i class="fa fa-trash close-card"></i></li>
+													</ul>
+												</div>
+											</div>
+											<div class="card-block table-border-style">
+												<div class="table-responsive">
+													<table class="table table-hover">
+														<thead>
+															<tr>
+																<th>Dealer ID</th>
+																<th>Company Name</th>
+																<th>Owner Name</th>
+																<th>Email</th>
+																<th>Mobile</th>
+																<th>Land Line</th>
+																<th>Dealer Code</th>
+																<th>Address</th>
+																<th>Dist</th>
+																<th>Dealer Type</th>
+																<th>Buy Form</th>
+																<th>Month sale</th>
+																<th>Action</th>
+															</tr>
+														</thead>
+														<tbody id="mytable">
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<!-- Hover table card end -->
+
+
+										<!-- Modal Add Dealer -->
+										<div id="adddealer">
+											<div class="modal fade" id="saveDealermodel" tabindex="-1"
+												role="dialog" aria-labelledby="addbutton" aria-hidden="true">
+												<div class="modal-dialog" role="document">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h5 class="modal-title" id="addbutton">Add Dealer</h5>
+														</div>
+
+														<form id="saveDealerform">
+															<div class="modal-body">
+																<div class="row">
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="mobile" class="form-control"
+																				id="mobile" required="required"> <span
+																				class="form-bar"></span> <label class="float-label">Mobile
+																				number</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="address" id="address"
+																				class="form-control" required=""> <span
+																				class="form-bar"></span> <label class="float-label">Address</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="cmp_name" id="cmp_name"
+																				class="form-control" required="required"> <span
+																				class="form-bar"></span> <label class="float-label">Company
+																				Name</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="state" class="form-control"
+																				id="state" required=""> <span
+																				class="form-bar"></span> <label class="float-label">State</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="owner_name" id="owner_name"
+																				class="form-control" required=""> <span
+																				class="form-bar"></span> <label class="float-label">Owner/Director
+																				Name</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="email" id="email" name="email"
+																				class="form-control" required=""> <span
+																				class="form-bar"></span> <label class="float-label">Email
+																				ID</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="landline" id="landline"
+																				class="form-control" required=""> <span
+																				class="form-bar"></span> <label class="float-label">
+																				Land Line Number</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="buy_from" id="buy_from"
+																				class="form-control" required=""> <span
+																				class="form-bar"></span> <label class="float-label">Buy
+																				From</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="dist" class="form-control"
+																				id="dist" required=""> <span
+																				class="form-bar"></span> <label class="float-label">
+																				District</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="month_sale" id="month_sale"
+																				class="form-control" required=""> <span
+																				class="form-bar"></span> <label class="float-label">Month
+																				Sale</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="city" class="form-control"
+																				id="city" required=""> <span
+																				class="form-bar"></span> <label class="float-label">
+																				City</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="comment" id="comment"
+																				class="form-control" required=""> <span
+																				class="form-bar"></span> <label class="float-label">Comment</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<select name="dlr_type" id="dlr_type"
+																				class="form-control">
+																				<option value="Gold">Gold</option>
+																				<option value="Silver">Silver</option>
+																				<option value="Bronze">Bronze</option>
+																				<option value="Distributer">Distributer</option>
+																			</select> <span class="form-bar"></span> <label
+																				class="float-label">Dealer Type</label>
+																		</div>
+																	</div>
+
+																</div>
+																<div class="modal-footer">
+																	<button type="button" class="btn btn-secondary"
+																		data-dismiss="modal">Close</button>
+																	<button type="submit" id="submitsave"
+																		class="btn btn-primary" data-dismiss="modal">Save</button>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+										<!-- Modal Update Dealer -->
+										<div id="updatedealer">
+											<div class="modal fade" id="updatedlrmodel" tabindex="-1"
+												role="dialog" aria-labelledby="addbutton" aria-hidden="true">
+												<div class="modal-dialog" role="document">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h5 class="modal-title" id="addbutton">Update Dealer</h5>
+														</div>
+
+														<form id="updateDealerform">
+															<div class="modal-body">
+																<div class="row">
+																	<input type="hidden" name="dlr_id" id="dlr_id1"
+																		required="required">
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="mobile" class="form-control"
+																				id="mobile1" required="required"> <span
+																				class="form-bar"></span> <label class="float-label">Mobile
+																				number</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="address" id="address1"
+																				class="form-control" required=""> <span
+																				class="form-bar"></span> <label class="float-label">Address</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="cmp_name" id="cmp_name1"
+																				class="form-control" required=""> <span
+																				class="form-bar"></span> <label class="float-label">Company
+																				Name</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="state" class="form-control"
+																				id="state1" required=""> <span
+																				class="form-bar"></span> <label class="float-label">State</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="owner_name" id="owner_name1"
+																				class="form-control" required=""> <span
+																				class="form-bar"></span> <label class="float-label">Owner/Director
+																				Name</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="dlr_code" id="dlr_code1"
+																				class="form-control" readonly="readonly"> <span
+																				class="form-bar"></span> <label class="float-label">Dealer
+																				Code</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="email" id="email1" name="email"
+																				class="form-control" required=""> <span
+																				class="form-bar"></span> <label class="float-label">Email
+																				ID</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<select name="dlr_type" id="dlr_type1"
+																				class="form-control">
+																				<option value="Glod">Gold</option>
+																				<option value="Silver">Silver</option>
+																				<option value="Bronze">Bronze</option>
+																				<option value="Distributer">Distributer</option>
+																			</select> <span class="form-bar"></span> <label
+																				class="float-label">Dealer Type</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="landline" id="landline1"
+																				class="form-control" required=""> <span
+																				class="form-bar"></span> <label class="float-label">
+																				Land Line Number</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="buy_from" id="buy_from1"
+																				class="form-control" required=""> <span
+																				class="form-bar"></span> <label class="float-label">Buy
+																				From</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="dist" class="form-control"
+																				id="dist1" required=""> <span
+																				class="form-bar"></span> <label class="float-label">
+																				District</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="month_sale" id="month_sale1"
+																				class="form-control" required=""> <span
+																				class="form-bar"></span> <label class="float-label">Month
+																				Sale</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="city" class="form-control"
+																				id="city1" required=""> <span
+																				class="form-bar"></span> <label class="float-label">
+																				City</label>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group form-primary">
+																			<input type="text" name="comment" id="comment1"
+																				class="form-control" required=""> <span
+																				class="form-bar"></span> <label class="float-label">Comment</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="modal-footer">
+																	<button type="button" class="btn btn-secondary"
+																		data-dismiss="modal">Close</button>
+																	<button type="submit" id="update_dlr_btn"
+																		class="btn btn-primary" data-dismiss="modal">Save</button>
+																</div>
+															</div>
+														</form>
+                                                    </div>
+                                                </div>
+                                            </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						<!-- Page-body end -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	<!-- Dealer Type  end -->
+	<!-- Page-body end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script>
+//find all
+		$(document).ready(function () {
+			showtable();
+		});
+		function showtable() {
+			$.ajax({
+				url: "/dealer/find-all-dealer-API",
+				type: 'GET',
+				success: function (data) {
+					console.log(data)
+					var d = '';
+					for (var i = 0; i < data.length; i++) {
+						//alert(i);
+						d += '<tr>' +
+							'<td > ' + data[i].dlr_id + '</td>' +
+							'<td > ' + data[i].cmp_name + '</td>' +
+							'<td > ' + data[i].owner_name+ '</td>' +
+							'<td > ' + data[i].email + '</td>' +
+							'<td > ' + data[i].mobile + '</td>' +
+							'<td > ' + data[i].landline + '</td>' +
+							'<td > ' + data[i].dlr_code + '</td>' +
+							'<td > ' + data[i].address + '</td>' +
+							'<td > ' + data[i].dist + '</td>' +
+							'<td > ' + data[i].dlr_type + '</td>' +
+							'<td > ' + data[i].buy_from + '</td>' +
+							'<td > ' + data[i].month_sale + '</td>' +
+							'<td > ' + '<button  id="edit" data="' + data[i].dlr_id + '"  type="button" class="btn btn-primary btn-sm mb3" data-toggle="modal" data-target="#updatedlrmodel">Edit</button> ' + ' ' +
+							'			<button  id="delete" data="' + data[i].dlr_id + '" type="button" class="btn btn-sm btn-secondary">Delete</button>' +
+							'</td > ' +
+							'</tr >'
+					}
+					$('#mytable').html(d);
+				},
+				error: function () {
+					alert("error show tabale....")
+				}
+			});
+		}
+		
+		//save
+		$(document).on('click', '#submitsave', function (e) {
+			var datastring = $("#saveDealerform").serialize();
+			console.log(datastring);
+			 // alert(datastring)
+			$.ajax({
+				url: "/dealer/save-dealer-API",
+				method: 'POST',
+				data: datastring,
+				success: function (data) {
+					showtable();
+					alert('saved Dealer Data '+data);
+				},
+				error: function () {
+					alert('error save call.....');
+				}
+			});
+		});
+		
+	//getbyid
+		$(document).on('click', '#edit', function (e) {
+			var dlr_id = $(this).attr("data");
+			//alert('dlr_id   ' + dlr_id)
+			$.ajax({
+				type: 'POST',
+				data: {dlr_id},
+				url: '/dealer/get-by-dealer-id',
+				success: function (data) {
+					$('#dlr_id1').val(data.dlr_id);
+					$('#cmp_name1').val(data.cmp_name);
+					$('#owner_name1').val(data.owner_name);
+					$('#email1').val(data.email);
+					$('#mobile1').val(data.mobile);
+					$('#landline1').val(data.landline);
+					$('#address1').val(data.address);
+					$('#state1').val(data.state);
+					$('#city1').val(data.city);
+					$('#buy_from1').val(data.buy_from);
+					$('#month_sale1').val(data.month_sale);
+					$('#dlr_type1').val(data.dlr_type);
+					$('#dlr_code1').val(data.dlr_code);
+					$('#dist1').val(data.dist);
+					$('#comment1').val(data.comment);
+				},
+				error: function (data) {
+					alert("error....." + data.id + "call");
+				}
+			});
+		});
+
+//update
+		$(document).on('click', '#update_dlr_btn', function (e) {
+			var DealerData = $("#updateDealerform").serialize();
+			//alert("DealerData "+ DealerData );	
+			console.log(DealerData);
+			$.ajax({
+				url: "/dealer/save-dealer-API",
+				method: "POST",
+				data: DealerData,
+				success: function (data) {
+					showtable();
+					alert('updated Dealer Data')
+				},
+				error: function () {
+					alert('error update call....');
+				}
+			});
+		});
+		
+		
+		// delete function
+		$(document).on('click', '#delete', function (e) {
+			var dlr_id = $(this).attr("data");
+			//alert('dlr__id     ' + dlr_id)
+			
+			let deletedlr=confirm("Do you really want delete this dealer?");
+			if(deletedlr){
+			
+			$.ajax({
+				type: 'Get',
+				data: {dlr_id},
+				url: "/dealer/delete-dealer-API",
+				success: function (data) {
+					showtable();
+					alert("Delete Dealer " + id);
+				},
+				error: function (data) {
+					alert("error call");
+				}
+			});
+			}// if close
+		});
+
+		
+
+</script>
+	<!-- Required Jquery -->
+	<script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="assets/js/jquery-ui/jquery-ui.min.js "></script>
+	<script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>
+	<script type="text/javascript"
+		src="assets/js/bootstrap/js/bootstrap.min.js "></script>
+	<script type="text/javascript" src="assets/pages/widget/excanvas.js "></script>
+	<!-- waves js -->
+	<script src="assets/pages/waves/js/waves.min.js"></script>
+	<!-- jquery slimscroll js -->
+	<script type="text/javascript"
+		src="assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
+	<!-- modernizr js -->
+	<script type="text/javascript" src="assets/js/modernizr/modernizr.js "></script>
+	<!-- slimscroll js -->
+	<script type="text/javascript" src="assets/js/SmoothScroll.js"></script>
+	<script src="assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+	<!-- Chart js -->
+	<script type="text/javascript" src="assets/js/chart.js/Chart.js"></script>
+	<!-- amchart js -->
+	<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+	<script src="assets/pages/widget/amchart/gauge.js"></script>
+	<script src="assets/pages/widget/amchart/serial.js"></script>
+	<script src="assets/pages/widget/amchart/light.js"></script>
+	<script src="assets/pages/widget/amchart/pie.min.js"></script>
+	<script
+		src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+	<!-- menu js -->
+	<script src="assets/js/pcoded.min.js"></script>
+	<script src="assets/js/vertical-layout.min.js "></script>
+	<!-- custom js -->
+	<script type="text/javascript"
+		src="assets/pages/dashboard/custom-dashboard.js"></script>
+	<script type="text/javascript" src="assets/js/script.js "></script>
+</body>
+
+</html>
