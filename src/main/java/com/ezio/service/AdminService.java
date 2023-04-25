@@ -6,7 +6,7 @@ import com.ezio.model.Admin;
 
 public interface AdminService {
 
-	public Admin adminsignUp(Admin admin);
+	
 	public List<Admin> findAllAdmin();
 	public void saveAdmin(Admin admin);
 	public Admin getAdminByID(long a_id);

@@ -12,9 +12,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.ezio.model.Dealer;
+import com.ezio.model.EmailDetails;
 import com.ezio.model.Response;
 import com.ezio.service.DealerServiceImpl;
 
@@ -23,7 +25,61 @@ import com.ezio.service.DealerServiceImpl;
 public class DealerController {
 	@Autowired
 	private DealerServiceImpl dealerimpl;
+	
 
+	// Sending a simple Email
+	@PostMapping("/send-mail-API")
+	@ResponseBody
+	public String sendMail( long dlr_id)
+	{
+		System.err.println("dealar send mail Id"+dlr_id);	
+		Dealer dealer=dealerimpl.findById(dlr_id);
+		System.err.println("Dealer Data"+ dealer);
+		EmailDetails emaildetails=new EmailDetails();
+		emaildetails.setRecipient(dealer.getEmail());
+		emaildetails.setMsgBody("Hello"+ dealer.getOwner_name()+"welcome");
+		emaildetails.setSubject("Product Details");
+		String status= dealerimpl.sendSimpleMail(emaildetails);
+		System.err.println("Ststus"+status);
+		return status;
+	}
+	
+	
+	
+	
+	
+
+	// Sending email with attachment
+	@PostMapping("/sendMailWithAttachment")
+	public String sendMailWithAttachment(@RequestBody EmailDetails details)
+	{
+		String status= dealerimpl.sendMailWithAttachment(details);
+		return status;
+	}
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	// Find all Distributers
 	@GetMapping(value = "/find-all-Distributers-API")
 	@ResponseBody

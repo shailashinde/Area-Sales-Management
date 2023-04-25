@@ -204,7 +204,7 @@
                                   </a>
                               </li>
                                <!--     Admin Tab -->
-                              <li class="pcoded-hasmenu"  th:if="${session.a_role == 'SuperAdmin'}">
+                              <li class="pcoded-hasmenu"  th:if="${session.adminrole == 'SuperAdmin'}">
                                   <a href="javascript:void(0)" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
                                       <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Admin </span>
@@ -322,7 +322,7 @@
                                   </a>
                               </li>
                                <!--     Admin Tab -->
-                              <li class="pcoded-hasmenu"  th:if="${session.a_role == 'SuperAdmin'}">
+                              <li class="pcoded-hasmenu"  th:if="${session.adminrole == 'SuperAdmin'}">
                                   <a href="javascript:void(0)" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
                                       <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Admin </span>

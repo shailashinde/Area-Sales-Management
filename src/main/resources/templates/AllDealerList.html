@@ -5,6 +5,8 @@
 <title>Area Mgnt System</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script
@@ -634,8 +636,9 @@
 							'<td > ' + data[i].dlr_type + '</td>' +
 							'<td > ' + data[i].buy_from + '</td>' +
 							'<td > ' + data[i].month_sale + '</td>' +
-							'<td > ' + '<button  id="edit" data="' + data[i].dlr_id + '"  type="button" class="btn btn-primary btn-sm mb3" data-toggle="modal" data-target="#updatedlrmodel">Edit</button> ' + ' ' +
-							'			<button  id="delete" data="' + data[i].dlr_id + '" type="button" class="btn btn-sm btn-secondary">Delete</button>' +
+							'<td > ' + '<button  id="edit" data="' + data[i].dlr_id + '"  type="button"  data-toggle="modal" data-target="#updatedlrmodel"><i class="fa fa-edit" style="font-size:24px;color:black"></i></button> ' + ' ' +
+							'			<button  id="delete" data="' + data[i].dlr_id + '" type="button"><i class="fas fa-trash" style="font-size:24px;color:red"></i></button>' +
+							'			<button  id="emailsend" data="' + data[i].dlr_id + '" type="button"><i class="fa fa-envelope" style="font-size:24px;color:black"></i></button>' +
 							'</td > ' +
 							'</tr >'
 					}
@@ -741,6 +744,27 @@
 		});
 
 		
+//send mail
+		$(document).on('click', '#emailsend', function (e) {
+			var dlr_id = $(this).attr("data");
+			alert('dlr__id     ' + dlr_id)
+			$.ajax({
+				type: 'Post',
+				data: {dlr_id},
+				url: "/dealer/send-mail-API",
+				success: function (data) {
+					showtable();
+					alert(data)
+				},
+				error: function (data) {
+					alert("error call");
+				}
+			});
+			
+		});
+
+		
+
 
 </script>
 	<!-- Required Jquery -->

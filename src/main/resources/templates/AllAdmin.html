@@ -188,11 +188,11 @@
 			</nav>
 			<div class="pcoded-main-container">
 				<div class="pcoded-wrapper">
-				
-				 <!--  *****    FRAGMENT DHASHBOARD ***********  -->
-                  <div th:replace="fristfragmentpage :: dashboard "></div>
-              
-				<!-- header top contain welcome -->
+
+					<!--  *****    FRAGMENT DHASHBOARD ***********  -->
+					<div th:replace="fristfragmentpage :: dashboard "></div>
+
+					<!-- header top contain welcome -->
 					<div class="pcoded-content">
 						<!-- Page-header start -->
 						<div class="page-header">
@@ -232,7 +232,7 @@
 										<!-- Hover table card start -->
 										<div class="card">
 											<div class="card-header">
-												<h5>Dealer Table</h5>
+												<h5>Admin Table</h5>
 												<div class="card-header-right">
 													<ul class="list-unstyled card-option">
 														<li><i class="fa fa fa-wrench open-card-option"></i></li>
@@ -282,22 +282,22 @@
 																<div class="row">
 																	<div class="col-sm-6">
 																		<div class="form-group form-primary">
-																			<input type="text" name="a_name" class="form-control"
-																				id="mobile" required="required"> <span
-																				class="form-bar"></span> <label class="float-label">
-																				Name </label>
+																			<input type="text" name="adminname"
+																				class="form-control" id="adminname"
+																				required="required"> <span class="form-bar"></span>
+																			<label class="float-label"> Name </label>
 																		</div>
 																	</div>
 																	<div class="col-sm-6">
 																		<div class="form-group form-primary">
-																			<input type="email" name="a_email" id="a_email"
+																			<input type="email" name="adminemail" id="adminemail"
 																				class="form-control" required=""> <span
 																				class="form-bar"></span> <label class="float-label">Email</label>
 																		</div>
 																	</div>
 																	<div class="col-sm-6">
 																		<div class="form-group form-primary">
-																			<input type="text" name="a_pass" id="a_pass"
+																			<input type="text" name="adminpass" id="aadminpass"
 																				class="form-control" required=""> <span
 																				class="form-bar"></span> <label class="float-label">password
 																			</label>
@@ -305,23 +305,23 @@
 																	</div>
 																	<div class="col-sm-6">
 																		<div class="form-group form-primary">
-																			<input type="text" name="a_mobile"
-																				class="form-control" id="a_mobile" required="">
+																			<input type="text" name="adminmobile"
+																				class="form-control" id="adminmobile" required="">
 																			<span class="form-bar"></span> <label
 																				class="float-label">Mobile</label>
 																		</div>
 																	</div>
 																	<div class="col-sm-6">
 																		<div class="form-group form-primary">
-																		<select name="a_role" id="a_role" class="form-control">
+																			<select name="adminrole" id="adminrole"
+																				class="form-control">
 																				<option value="SuperAdmin">Superadmin</option>
 																				<option value="Admin">admin</option>
-																			</select>
-																			<span class="form-bar"></span> <label
+																			</select> <span class="form-bar"></span> <label
 																				class="float-label">Type</label>
 																		</div>
 																	</div>
-																	
+
 																	<!-- <div class="col-sm-6">
 																		<div class="form-group form-primary">
 																			<input type="file" name="a_img" id="a_img"
@@ -329,13 +329,15 @@
 																				class="form-bar"></span> <label class="float-label">Image</label>
 																		</div>
 																	</div>
-                                                          			 --> <div class="col-sm-6">
-																	<div class="modal-footer">
-																		<button type="button" class="btn btn-secondary"
-																			data-dismiss="modal">Close</button>
-																		<button type="submit" id="submitsave"
-																			class="btn btn-primary" >Save</button>
-																	</div></div>
+                                                          			 -->
+																	<div class="col-sm-6">
+																		<div class="modal-footer">
+																			<button type="button" class="btn btn-secondary"
+																				data-dismiss="modal">Close</button>
+																			<button type="submit" id="submitsave"
+																				class="btn btn-primary">Save</button>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</form>
@@ -364,23 +366,23 @@
 																<div class="row">
 																	<div class="col-sm-6">
 																		<div class="form-group form-primary">
-																			<input type="hidden" name="a_id" id="a_id1">
-																			<input type="text" name="a_name" class="form-control"
-																				id="a_name1" required="required"> <span
-																				class="form-bar"></span> <label class="float-label">
-																				Name </label>
+																			<input type="hidden" name="adminid" id="a_id1">
+																			<input type="text" name="adminname"
+																				class="form-control" id="adminname1"
+																				required="required"> <span class="form-bar"></span>
+																			<label class="float-label"> Name </label>
 																		</div>
 																	</div>
 																	<div class="col-sm-6">
 																		<div class="form-group form-primary">
-																			<input type="email" name="a_email" id="a_email1"
+																			<input type="email" name="adminemail" id="a_email1"
 																				class="form-control" required=""> <span
 																				class="form-bar"></span> <label class="float-label">Email</label>
 																		</div>
 																	</div>
 																	<div class="col-sm-6">
 																		<div class="form-group form-primary">
-																			<input type="text" name="a_pass" id="a_pass1"
+																			<input type="text" name="adminpass" id="a_pass1"
 																				class="form-control" required=""> <span
 																				class="form-bar"></span> <label class="float-label">password
 																			</label>
@@ -388,7 +390,7 @@
 																	</div>
 																	<div class="col-sm-6">
 																		<div class="form-group form-primary">
-																			<input type="text" name="a_mobile"
+																			<input type="text" name="adminmobile"
 																				class="form-control" id="a_mobile1" required="">
 																			<span class="form-bar"></span> <label
 																				class="float-label">Mobile</label>
@@ -396,19 +398,19 @@
 																	</div>
 																	<div class="col-sm-6">
 																		<div class="form-group form-primary">
-																		<select name="a_role" id="a_role1" class="form-control">
+																			<select name="a_role" id="adminrole1"
+																				class="form-control">
 																				<option value="SuperAdmin">Superadmin</option>
 																				<option value="Admin">admin</option>
-																			</select>
-																			<span class="form-bar"></span> <label
+																			</select> <span class="form-bar"></span> <label
 																				class="float-label">Type</label>
 																		</div>
 																	</div>
-																	
-																	
+
+
 																	<div class="col-sm-6">
 																		<div class="form-group form-primary">
-																			<input type="file" name="a_img" id="a_img1"
+																			<input type="file" name="adminimg" id="a_img1"
 																				class="form-control" required=""> <span
 																				class="form-bar"></span> <label class="float-label">Image</label>
 																		</div>
@@ -437,12 +439,12 @@
 				<!-- Dealer Type  end -->
 			</div>
 		</div>
-</div>
-		<!-- Page-body end -->
+	</div>
+	<!-- Page-body end -->
 
-		<script
-			src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-		<script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script>
 //find all
 		$(document).ready(function () {
 			showtable();
@@ -457,15 +459,15 @@
 					for (var i = 0; i < data.length; i++) {
 						//alert(i);
 						d += '<tr>' +
-							'<td > ' + data[i].a_id + '</td>' +
-							'<td > ' + data[i].a_name + '</td>' +
-							'<td > ' + data[i].a_email+ '</td>' +
-							'<td > ' + data[i].a_pass + '</td>' +
-							'<td > ' + data[i].a_mobile + '</td>' +
-							'<td > ' + data[i].a_role + '</td>' +
-							'<td > ' + data[i].a_img + '</td>' +
-							'<td > ' + '<button  id="edit" data="' + data[i].a_id + '"  type="button" class="btn btn-primary btn-sm mb3" data-toggle="modal" data-target="#updatedlrmodel">Edit</button> ' + ' ' +
-							'			<button  id="delete" data="' + data[i].a_id + '" type="button" class="btn btn-sm btn-secondary">Delete</button>' +
+							'<td > ' + data[i].adminid + '</td>' +
+							'<td > ' + data[i].adminname + '</td>' +
+							'<td > ' + data[i].adminemail+ '</td>' +
+							'<td > ' + data[i].adminpass + '</td>' +
+							'<td > ' + data[i].adminmobile + '</td>' +
+							'<td > ' + data[i].adminrole + '</td>' +
+							'<td > ' + data[i].adminimg + '</td>' +
+							'<td > ' + '<button  id="edit" data="' + data[i].adminid + '"  type="button" class="btn btn-primary btn-sm mb3" data-toggle="modal" data-target="#updatedlrmodel">Edit</button> ' + ' ' +
+							'			<button  id="delete" data="' + data[i].adminid + '" type="button" class="btn btn-sm btn-secondary">Delete</button>' +
 							'</td > ' +
 							'</tr >'
 					}
@@ -488,7 +490,7 @@
 				data: datastring,
 				success: function (data) {
 					showtable();
-					alert('saved Admin Data ')
+					alert('saved Admin Data '+data)
 				},
 				error: function () {
 					alert('error save call.....');
@@ -499,7 +501,6 @@
 //save
 			$(document).on('submit', '#saveAdminform', function (e) {
 			e.preventDefault();
-			
 			$.ajax({
 				url: "/admin/save-admin-API",
 				method: 'POST',
@@ -509,9 +510,13 @@
 				processData : false,
 				cache : false,
 				success: function (data) {
-					showtable();
-					$('#saveAdminmodel').modal('hide');
-					alert('saved Admin Data successfully...!')
+					  if (data) {
+     					alert("Succesfully Save");
+						 $('#saveAdminmodel').modal('hide');
+						 showtable();
+   					 } else {
+    					alert("Email Id Already Exist");
+   					 }	
 				},
 				error: function () {
 					alert('error save call.....');
@@ -523,20 +528,20 @@
 		
 	//getbyid
 		$(document).on('click', '#edit', function (e) {
-			var a_id = $(this).attr("data");
-			//alert('admin Id   ' + a_id)
+			var adminid = $(this).attr("data");
+			//alert('admin Id   ' + adminid)
 			$.ajax({
 				type: 'POST',
-				data: {a_id},
+				data: {adminid},
 				url: '/admin/get-by-admin-id',
 				success: function (data) {
-					$('#a_id1').val(data.a_id);
-					$('#a_name1').val(data.a_name);
-					$('#a_email1').val(data.a_email);
-					$('#a_pass1').val(data.a_pass);
-					$('#a_mobile1').val(data.a_mobile);
-					$('#a_role1').val(data.a_role);
-					$('#a_img1').val(data.a_img);
+					$('#adminid1').val(data.adminid);
+					$('#adminname1').val(data.adminname);
+					$('#adminemail1').val(data.adminemail);
+					$('#adminpass1').val(data.adminpass);
+					$('#adminmobile1').val(data.adminmobile);
+					$('#adminrole1').val(data.adminrole);
+					$('#adminimg1').val(data.adminimg);
 				},
 				error: function (data) {
 					alert("error call");
@@ -566,18 +571,19 @@
 		
 		// delete function
 		$(document).on('click', '#delete', function (e) {
-			var a_id = $(this).attr("data");
-			alert('a_id  ' + a_id)
+			var adminid = $(this).attr("data");
+		//	alert('adminid  ' + adminid)
 // conformation alert
 			let deleteadmin=confirm("Do you really want delete this Admin?");	
 			if(deleteadmin){
+			
 			$.ajax({
 				type: 'Get',
-				data: {a_id},
+				data: {adminid},
 				url: "/admin/delete-admin-API",
 				success: function (data) {
 					showtable();
-					alert("Delete Admin " + id);
+				//	alert("Delete Admin " + adminid);
 				},
 				error: function (data) {
 					alert("error Delete call");
@@ -589,41 +595,41 @@
 		
 
 </script>
-		<!-- Required Jquery -->
-		<script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
-		<script type="text/javascript"
-			src="assets/js/jquery-ui/jquery-ui.min.js "></script>
-		<script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>
-		<script type="text/javascript"
-			src="assets/js/bootstrap/js/bootstrap.min.js "></script>
-		<script type="text/javascript" src="assets/pages/widget/excanvas.js "></script>
-		<!-- waves js -->
-		<script src="assets/pages/waves/js/waves.min.js"></script>
-		<!-- jquery slimscroll js -->
-		<script type="text/javascript"
-			src="assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
-		<!-- modernizr js -->
-		<script type="text/javascript" src="assets/js/modernizr/modernizr.js "></script>
-		<!-- slimscroll js -->
-		<script type="text/javascript" src="assets/js/SmoothScroll.js"></script>
-		<script src="assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
-		<!-- Chart js -->
-		<script type="text/javascript" src="assets/js/chart.js/Chart.js"></script>
-		<!-- amchart js -->
-		<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-		<script src="assets/pages/widget/amchart/gauge.js"></script>
-		<script src="assets/pages/widget/amchart/serial.js"></script>
-		<script src="assets/pages/widget/amchart/light.js"></script>
-		<script src="assets/pages/widget/amchart/pie.min.js"></script>
-		<script
-			src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-		<!-- menu js -->
-		<script src="assets/js/pcoded.min.js"></script>
-		<script src="assets/js/vertical-layout.min.js "></script>
-		<!-- custom js -->
-		<script type="text/javascript"
-			src="assets/pages/dashboard/custom-dashboard.js"></script>
-		<script type="text/javascript" src="assets/js/script.js "></script>
+	<!-- Required Jquery -->
+	<script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="assets/js/jquery-ui/jquery-ui.min.js "></script>
+	<script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>
+	<script type="text/javascript"
+		src="assets/js/bootstrap/js/bootstrap.min.js "></script>
+	<script type="text/javascript" src="assets/pages/widget/excanvas.js "></script>
+	<!-- waves js -->
+	<script src="assets/pages/waves/js/waves.min.js"></script>
+	<!-- jquery slimscroll js -->
+	<script type="text/javascript"
+		src="assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
+	<!-- modernizr js -->
+	<script type="text/javascript" src="assets/js/modernizr/modernizr.js "></script>
+	<!-- slimscroll js -->
+	<script type="text/javascript" src="assets/js/SmoothScroll.js"></script>
+	<script src="assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+	<!-- Chart js -->
+	<script type="text/javascript" src="assets/js/chart.js/Chart.js"></script>
+	<!-- amchart js -->
+	<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+	<script src="assets/pages/widget/amchart/gauge.js"></script>
+	<script src="assets/pages/widget/amchart/serial.js"></script>
+	<script src="assets/pages/widget/amchart/light.js"></script>
+	<script src="assets/pages/widget/amchart/pie.min.js"></script>
+	<script
+		src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+	<!-- menu js -->
+	<script src="assets/js/pcoded.min.js"></script>
+	<script src="assets/js/vertical-layout.min.js "></script>
+	<!-- custom js -->
+	<script type="text/javascript"
+		src="assets/pages/dashboard/custom-dashboard.js"></script>
+	<script type="text/javascript" src="assets/js/script.js "></script>
 </body>
 
 </html>

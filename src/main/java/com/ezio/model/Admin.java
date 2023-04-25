@@ -20,12 +20,12 @@ public class Admin {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long a_id;
-	private String a_name;
-	private String a_email;
-	private String a_pass;
-	private String a_mobile;
-	private String a_role;
-	private String a_img;
+	private Long adminid;
+	private String adminname;
+	private String adminemail;
+	private String adminpass;
+	private String adminmobile;
+	private String adminrole;
+	private String adminimg;
 
 }

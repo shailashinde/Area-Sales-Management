@@ -27,5 +27,7 @@ public interface DealerRepository extends JpaRepository<Dealer	, Long>{
 	List<Dealer> FindByDealerDist(String dist);
 	@Query(value="SELECT * FROM dealer WHERE dlr_type= 'distributer' ", nativeQuery =true)
 	List<Dealer> findAllDistributers();
+	
+	Dealer findByEmail(long dlr_id);
 
 }

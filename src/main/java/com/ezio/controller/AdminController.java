@@ -1,9 +1,7 @@
 package com.ezio.controller;
 
 import java.util.List;
-
 import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,35 +17,25 @@ import com.ezio.service.AdminServiceImpl;
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
-
 	@Autowired
 	private AdminServiceImpl adminimpl;
-	
 	String uploadProductDirectory = System.getProperty("user.dir") + "/uploads/";
 
-	// Sign IN
-		@PostMapping("/admin-sign-up-API")
-		public String adminSignIn(@ModelAttribute("admin") Admin admin,HttpSession session, Model model) {
-			String emaildata=admin.getA_email();
-			Admin result = adminimpl.adminsignUp(admin);
-			if(result != null) {
-					String email=result.getA_email();
-				
-					if (email.equals(emaildata)) {
-					session.setAttribute("a_role", result.getA_role());
-					session.setAttribute("a_name", result.getA_name());
-					model.addAttribute("successmsg","Successfully Login");
-					return "home";
-					
-					} else {
-						model.addAttribute("error", "An error occurred");
-						return "login_page"; 
-					}
-			  } else {
-				return "login_page";
-			}
-		}
-
+	
+//sign in
+	@PostMapping(value = "/admin-sign-in-API")
+	public String signInAdmin(@ModelAttribute("admin") Admin admin,HttpSession session, Model model) {	
+		Admin result= adminimpl.adminSignIn(admin);
+		if(result != null) {
+			session.setAttribute("adminrole", result.getAdminrole());
+			session.setAttribute("a_name",result.getAdminname());
+			return "home";}
+			else 
+				return "login_page";	
+		
+		
+	}
+		 
 //find All
 		@GetMapping(value = "/find-all-admin-api")
 		@ResponseBody
@@ -57,9 +45,21 @@ public class AdminController {
 //save	
 		@PostMapping(value = "/save-admin-API")
 		@ResponseBody
-		public void saveAdmin(Admin admin) {
-			adminimpl.saveAdmin(admin);
-		}
+		public boolean saveAdmin(Admin admin) {
+			System.err.println("Admin"+admin);
+			String email=admin.getAdminemail();
+			
+			boolean result=adminimpl.existByEmail(email);
+			
+			System.err.println("email exist :"+result);
+			if(result) {
+				return false;// email Exist
+			}else {
+				adminimpl.saveAdmin(admin);
+				return true;
+			}
+			
+	}
 		/*
 		 * public void saveAdmin(Admin admin,@RequestParam("a_img") MultipartFile a_img)
 		 * { System.err.println("1st call"); File f = new File(uploadProductDirectory);
@@ -78,19 +78,19 @@ public class AdminController {
 		 *///Get by ID
 		@PostMapping("/get-by-admin-id")
 		@ResponseBody
-		public Admin getByAdminId(Long a_id) {
-			System.err.println("admin id=" + a_id);
-			Admin admin = adminimpl.getAdminByID(a_id);
-			System.err.println("Admin Data" + admin);
+		public Admin getByAdminId(Long adminid) {
+			//System.err.println("admin id=" + adminid);
+			Admin admin = adminimpl.getAdminByID(adminid);
+			//System.err.println("Admin Data" + admin);
 			return admin;
 		}
 
 //Delete
 		@GetMapping(value = "/delete-admin-API")
 		@ResponseBody
-		public void deleteAdmin(Long a_id) {
-			System.out.println("Admin ID=" + a_id);
-			adminimpl.deletAdmin(a_id);
+		public void deleteAdmin(Long adminid) {
+			System.out.println("Admin ID=" + adminid);
+			adminimpl.deletAdmin(adminid);
 		}
 
 }
